@@ -1,5 +1,5 @@
 var CALENDAR_ID = 'nsa5aedov4pp4evsvk94pe59cg@group.calendar.google.com';
-var API_KEY = 'YOUR_GOOGLE_API_KEY';
+var API_KEY = 'AIzaSyDWl0WDwml1dBsklJiHjFcz4L4oX1-pyFM';
 
 
 var displayedDate = moment();
