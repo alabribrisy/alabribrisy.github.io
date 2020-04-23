@@ -1,0 +1,15 @@
+<IfModule mod_deflate.c>  
+# Insert output filter by type  
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript  
+AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml  
+AddOutputFilterByType DEFLATE application/javascript application/x-javascript  
+AddOutputFilterByType DEFLATE application/x-httpd-php  
+AddOutputFilterByType DEFLATE application/cgi-php5  
+AddOutputFilterByType DEFLATE application/cgi-php53  
+AddOutputFilterByType DEFLATE application/cgi-php54  
+</IfModule>
+# Don't compress images, compressed files, docs nor movies 
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary 
+SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary 
+SetEnvIfNoCase Request_URI \.(?:pdf|doc)$ no-gzip dont-vary 
+SetEnvIfNoCase Request_URI \.(?:avi|mov|mp3|mp4|rm)$ no-gzip dont-vary
